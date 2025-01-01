@@ -21,7 +21,7 @@ public class UpdateWorkoutDTO : BaseWorkoutDTO
     public int WorkoutId { get; set; }
 }
 
-public class ReadWorkoutDTO : BaseWorkoutDTO
+public class ReadWorkoutDTO : UpdateWorkoutDTO
 {
-    List<UpdateWorkoutSessionDTO> Sessions { get; set; }
+    public List<UpdateWorkoutSessionDTO> Sessions { get; set; }
 }

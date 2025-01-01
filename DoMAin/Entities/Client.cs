@@ -20,7 +20,6 @@ public class Client
     public DateTime DateOfBirth { get; set; }
     public MembershipStatus MembershipStatus { get; set; }
     
-    [ForeignKey("ClientId")]
     public List<WorkoutSession> WorkoutSession { get; set; }
 
 }

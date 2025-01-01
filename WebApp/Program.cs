@@ -1,3 +1,4 @@
+using DoMAin.Entities;
 using Infrastructure.Data;
 using Infrastructure.Interfaces;
 using Infrastructure.Services;
@@ -10,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IWorkoutService, WorkoutService>();
+builder.Services.AddScoped<ITrainerService, TrainerService>();
+builder.Services.AddScoped<IWorkoutSessionService, WorkoutSessionService>();
 builder.Services.AddDbContext<Context>(opt => 
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 ;

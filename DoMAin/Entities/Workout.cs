@@ -18,7 +18,6 @@ public class Workout
     public WorkoutDifficulty Difficulty { get; set; }
     public bool IsActive { get; set; }
     
-    [ForeignKey("WorkoutId")]
     public List<WorkoutSession> WorkoutSession { get; set; }
     
 }
