@@ -16,9 +16,7 @@ public class Trainer
     public string PhoneNumber { get; set; }
     public int Experience { get; set; }
     public TrainerStatus Status { get; set; }
-    public int Type { get; set; }
     public string Specialization { get; set; }
     
-    [ForeignKey("TrainerId")]
     public List<WorkoutSession> WorkoutSession { get; set; }
 }

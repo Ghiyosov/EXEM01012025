@@ -10,7 +10,6 @@ public class TrainerBaseDTO
     public string PhoneNumber { get; set; }
     public int Experience { get; set; }
     public TrainerStatus Status { get; set; }
-    public int Type { get; set; }
     public string Specialization { get; set; }
 }
 
@@ -24,5 +23,5 @@ public class UpdateTrainerDTO : TrainerBaseDTO
 
 public class ReadTrainerDTO : UpdateTrainerDTO
 {
-    List<UpdateWorkoutSessionDTO> Sessions { get; set; }
+    public List<UpdateWorkoutSessionDTO> Sessions { get; set; }
 }

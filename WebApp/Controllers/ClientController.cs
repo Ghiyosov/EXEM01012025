@@ -10,7 +10,7 @@ namespace WebApp.Controllers;
 public class ClientController(IClientService _service)
 {
     [HttpGet("GetClients")]
-    public async Task<Responce<List<ReadClientDTO>>> RedaClients(ClienFilter filter)
+    public async Task<Responce<List<ReadClientDTO>>> RedaClients([FromQuery]ClienFilter filter)
         => await _service.RedaClients(filter);
     [HttpGet("GetClient/{id}")]
     public async Task<Responce<ReadClientDTO>> ReadClient(int Id)

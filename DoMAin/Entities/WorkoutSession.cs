@@ -13,8 +13,8 @@ public class WorkoutSession
     public int WorkoutId { get; set; }
     public int ClientId { get; set; }
     public DateTime SessionDate { get; set; }
-    public DateTime StartTime { get; set; }
-    public DateTime EndTime { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public TimeSpan EndTime { get; set; }
     public SessionStatus Status { get; set; }
     public int MaxCapacity { get; set; }
     public int CurrentParticipants  { get; set; }
